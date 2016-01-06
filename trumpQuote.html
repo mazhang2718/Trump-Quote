@@ -1,0 +1,253 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Winter Break Trump Quotes</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+		var quoteSource=[
+		{
+			quote: "Strange, but I see wacko Bernie Sanders allies coming over to me because I'm lowering taxes, while he will double & triple them, a disaster!",
+			date:"Dec 28"
+	    },
+	    
+	    {
+			quote: "I will do far more for women than Hillary, and I will keep our country safe, something which she will not be able to do-no strength/stamina!",
+			date:"Dec 26"
+	    },
+
+	    {
+	    	quote: "Hillary Clinton lied last week when she said ISIS made a D.T. video. The video that ISIS made was about her husband being a degenerate.",
+	    	date: "Jan 3"
+	    },
+
+	    {
+	    	quote: "Does everyone see that the Democrats and President Obama are now, because of me, starting to deport people who are here illegally. Politics!",
+	    	date: "Dec. 25"
+	    },
+
+	    {
+	    	quote: "When will the Democrats, and Hillary in particular, say 'we must build a wall, a great wall, and Mexico is going to pay for it?' Never!",
+	    	date: "Dec. 25"
+	    },
+
+	    {
+	    	quote: "Hillary said 'I really deplore the tone and inflammatory rhetoric of his campaign.'' I deplore the death and destruction she caused-stupidity",
+	    	date: "Dec. 23"
+	    },
+
+	    {
+	    	quote: "Hillary, when you complain about 'a penchant for sexism,' who are you referring to. I have great respect for women. BE CAREFUL!",
+	    	date: "Dec. 23"
+	    },
+
+	    {
+	    	quote: "When I said that Hillary Clinton got schlonged by Obama, it meant got beaten badly. The media knows this. Often used word in politics!",
+	    	date: "Dec. 22"
+	    },
+
+	    {
+	    	quote: "Do you think that Hillary Clinton will apologize to me for the lie she told about 'the video' of me being used by ISIS. There is no video.",
+	    	date: "Dec. 21"
+	    },
+
+	      {
+	    	quote: "Very sad what happened last night at the Miss Universe Pageant. I sold it 6 months ago for a record price. This would never have happened!",
+	    	date: "Dec. 21"
+	    }
+
+	];
+		
+
+		$('#quoteButton').click(function(evt){
+			//define the containers of the info we target
+			var quote = $('#quoteContainer p').text();
+			var quoteDate = $('#quoteDate').text();
+			//prevent browser's default action
+			evt.preventDefault();
+			//getting a new random number to attach to a quote and setting a limit
+			var sourceLength = quoteSource.length;
+			var randomNumber= Math.floor(Math.random()*sourceLength);
+			//set a new quote
+			for(i=0;i<=sourceLength;i+=1){
+				var newQuoteText = quoteSource[randomNumber].quote;
+				var newQuoteDate = quoteSource[randomNumber].date;
+				//console.log(newQuoteText,newQuoteGenius);
+      			var timeAnimation = 250;
+      			var quoteContainer = $('#quoteContainer');
+      			//fade out animation with callback
+      			quoteContainer.fadeOut(timeAnimation, function(){
+			        quoteContainer.html('');
+					quoteContainer.append('<p>'+newQuoteText+'</p>'+'<p id="quoteDate">'+'-								'+newQuoteDate+'</p>');
+   						     //fadein animation.
+        			quoteContainer.fadeIn(timeAnimation);
+      				});  
+			
+				break;
+			};//end for loop
+	
+		});//end quoteButton function
+
+	});//end document ready
+
+</script>
+
+<style>
+
+	body{
+		font-family: 'PT Sans', sans-serif;
+		color: #000;
+	}
+
+	#container{
+		width: 100%;
+		margin: 20px auto;
+		position: absolute;
+	}
+	#container h2{
+		text-align:center;
+		color:rgb(078, 042, 132);
+	}
+
+	#container h4{
+		text-align:center;
+		color:black;
+		font-weight: normal;
+	}
+
+	/*#trumpify {
+		width: 400px;
+		height: 100px;
+		background: url("img/trump3.gif");
+	}*/
+
+	#quoteContainer{
+		width:50%;
+		background: #fff;
+		padding:10px;
+		margin: 10px auto;
+		text-align: center;
+	}
+	#buttonContainer{
+		width: 100%;
+		text-align: center;
+	}
+	#quoteButton{
+		/*position: absolute;
+		top: 400px;
+		right: 75px;*/
+		width:50%;
+		border:2px solid rgb(078, 042, 132);
+		color:rgb(078, 042, 132);
+		font-family: inherit;
+		font-weight: bold;
+		padding:5px;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	#quoteButton:hover{
+		cursor:pointer;
+		background:rgb(078, 042, 132);
+		color: white;
+	}
+	#quoteButton:active{
+		cursor: pointer;
+	}
+	#quoteButton{
+		display: inline-block;
+	}
+	#quoteDate{
+		font-style: italic;
+		font-weight: 600;
+		text-align: center;
+	}
+
+		.bubble 
+	{
+	position: relative;
+	width: 415px;
+	height: 145px;
+	padding: 12px;
+	background: rgba(80,21,132,.9);
+	-webkit-border-radius: 32px;
+	-moz-border-radius: 32px;
+	border-radius: 32px;
+	border: rgba(80,21,132,.9) solid 12px;
+	}
+
+	.bubble:after 
+	{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 16px 0;
+	border-color: rgba(80,21,132,.9) transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	margin-left: -16px;
+	bottom: -15px;
+	left: 50%;
+	}
+
+	.bubble:before 
+	{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 26px 27px 0;
+	border-color: rgba(80,21,132,.9) transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+	margin-left: -27px;
+	bottom: -38px;
+	left: 50%;
+	}
+
+	img
+	{
+		width: 200px;
+		height: 200px;
+		margin-left: 37%;
+		margin-top: 20px;
+		text-align: center;
+	}
+	/*MEDIA QUERIES*/
+	/*
+	@media screen and(max-width:760px){
+		#quoteButton,#addNew{
+			display: block;
+		}
+	}
+	*/
+
+</style>
+
+</head>
+
+
+<body>
+	<div id="container">
+		<h2>Winter Break Trump Quotes</h2>
+		<h4>trump is a dumb butt hurp durp</h4>
+				<div id="quoteContainer" class="bubble">
+					<p></p>
+					<p id="quoteDate"></p>			
+				</div><!--end quoteContainer-->
+
+		    <div id="trumpify">
+		    	<img src="img/trump.gif">
+		    </div>
+			<div id="buttonContainer">
+				<a href="#" id="quoteButton">Give me a quote!</a>
+			</div><!--end buttonContainer-->
+	</div><!--end container-->
+</body>
+</html>
+
+
+
